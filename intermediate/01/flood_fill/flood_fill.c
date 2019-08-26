@@ -6,7 +6,7 @@
 /*   By: vzhao <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/08 13:45:05 by vzhao             #+#    #+#             */
-/*   Updated: 2019/08/08 13:57:18 by vzhao            ###   ########.fr       */
+/*   Updated: 2019/08/26 14:24:49 by vzhao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ void	flood_fill(char **tab, t_point size, t_point begin)
 {
 	char target;
 
-	target = tab[begin.y - 1][begin.x - 1];
-	f_fill(tab, size, begin.y - 1, begin.x - 1, target);
+	target = tab[begin.y][begin.x];
+	f_fill(tab, size, begin.y, begin.x, target);
 }
