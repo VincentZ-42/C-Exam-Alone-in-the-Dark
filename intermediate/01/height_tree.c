@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/ ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   height_tree.c                                      :+:      :+:    :+:   */
@@ -6,7 +6,7 @@
 /*   By: vzhao <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/09 13:55:31 by vzhao             #+#    #+#             */
-/*   Updated: 2019/08/09 15:14:10 by vzhao            ###   ########.fr       */
+/*   Updated: 2019/09/09 20:23:30 by vzhao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,12 @@ int		height_tree(struct s_node *root)
 		return (-1);
 	i = 0;
 	max = 0;
-	printf("I am here: %d\n", root->value);
 	while (root->nodes[i])
 	{
-		printf("%d, i=%d\n", root->value, i);
 		temp = height_tree(root->nodes[i]) + 1;
-		printf("%d, i=%d\n", root->value, i);
 		max = (temp > max) ? temp : max;
-		printf("max becomes %d\n", max);
 		i++;
 	}
-	printf("max = %d---------------------\n", max);
 	return (max);
 }
 
