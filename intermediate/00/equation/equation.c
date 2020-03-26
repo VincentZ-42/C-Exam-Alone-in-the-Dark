@@ -14,26 +14,11 @@
 
 void		equation(int n)
 {
-	int A = 0;
-	int B = 0;
-	int C = 0;
-
-	while (A < 10)
-	{
-		B = 0;
-		while (B < 10)
-		{
-			C = 0;
-			while (C < 10)
-			{
-				if ((A*10 + B) + (C*10 + A) == n)
+	for (int A = 0; A < 10; A++)
+		for (int B = 0; B < 10; B++)
+			for (int C = 0; C < 10; C++)
+				if (A * 10 + B + C * 10 + A == n)
 					printf("A = %d, B = %d, C = %d\n", A, B, C);
-				C++;
-			}
-			B++;
-		}
-		A++;
-	}
 }
 
 #ifdef TEST
@@ -42,8 +27,24 @@ void		equation(int n)
 
 int			main(int ac, char **av)
 {
+	// Use this if you want to test an input
 	if (ac == 2)
 		equation(atoi(av[1]));
+	
+	// Use this if you want to test examples in instruction
+/*
+	int input = 42;
+	printf("input = %d\n", input);
+	equation(input);
+	
+	input = 111;
+	printf("input = %d\n", input);
+	equation(input);
+
+	input = 0;
+	printf("input = %d\n", input);
+	equation(input);
+*/	 
 	return (0);
 }
 
